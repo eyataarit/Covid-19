@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="a1" prefHeight="400.0" prefWidth="861.0" style="-fx-background-color: #2D120F;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Interface_LaboController">
+   <children>
+      <AnchorPane fx:id="a2" layoutX="14.0" layoutY="17.0" prefHeight="366.0" prefWidth="200.0" style="-fx-background-color: #9C2B27;">
+         <children>
+            <TextField fx:id="tfdLab" layoutX="18.0" layoutY="14.0" promptText="Nom_Labo" />
+            <ImageView fx:id="img" fitHeight="57.0" fitWidth="92.0" layoutX="100.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="tfdPrenom" layoutX="18.0" layoutY="125.0" promptText="Prenom" />
+            <TextField fx:id="tfdNom" layoutX="18.0" layoutY="160.0" promptText="Nom" />
+            <TextField fx:id="tdfCin" layoutX="18.0" layoutY="193.0" promptText="CIN" />
+            <TextField fx:id="tdfResultat" layoutX="18.0" layoutY="233.0" promptText="Resultat" />
+            <TextField fx:id="tdfDate" layoutX="18.0" layoutY="275.0" promptText="Date" />
+            <TextField fx:id="tfdGouver" layoutX="18.0" layoutY="315.0" promptText="Gouvernorat" />
+            <Button fx:id="bthome" layoutX="14.0" layoutY="52.0" mnemonicParsing="false" onAction="#home" prefHeight="57.0" prefWidth="73.0" style="-fx-background-color: #9C2B27;" text="btn">
+               <graphic>
+                  <ImageView fx:id="img2" fitHeight="57.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/flech.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tableTest" layoutX="228.0" layoutY="14.0" onMouseClicked="#getTest" prefHeight="311.0" prefWidth="608.0" style="-fx-background-color: #9C2B27;">
+        <columns>
+          <TableColumn fx:id="colPrenom" prefWidth="75.33332824707031" text="Prenom" />
+          <TableColumn fx:id="colNom" prefWidth="76.66665649414062" text="Nom" />
+            <TableColumn fx:id="colCin" prefWidth="72.66665649414062" text="CIN" />
+            <TableColumn fx:id="colResultat" prefWidth="92.66671752929688" text="Resultat" />
+            <TableColumn fx:id="colDate" prefWidth="80.6666259765625" text="Date" />
+            <TableColumn fx:id="col_governorat" prefWidth="117.3333740234375" text="Gouvernorat" />
+            <TableColumn fx:id="colNomLabo" prefWidth="90.6666259765625" text="Nom_labo" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAjout" layoutX="251.0" layoutY="341.0" mnemonicParsing="false" onAction="#Ajout" prefHeight="33.0" prefWidth="125.0" style="-fx-background-color: #E45652;" text="Ajouter" />
+      <Button fx:id="btnModif" layoutX="485.0" layoutY="341.0" mnemonicParsing="false" onAction="#Modification" prefHeight="33.0" prefWidth="125.0" style="-fx-background-color: #E45652;" text="Modifier" />
+      <Button fx:id="btnSupp" layoutX="700.0" layoutY="341.0" mnemonicParsing="false" onAction="#Suppression" prefHeight="33.0" prefWidth="118.0" style="-fx-background-color: #E45652;" text="Supprimer" />
+   </children>
+</AnchorPane>

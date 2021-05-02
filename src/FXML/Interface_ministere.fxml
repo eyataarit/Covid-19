@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="467.0" prefWidth="807.0" style="-fx-background-color: #2D120F;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Interface_ministereController">
+   <children>
+      <Label fx:id="lblmini" alignment="CENTER" layoutX="145.0" layoutY="7.0" prefHeight="33.0" prefWidth="436.0" text="Ministère de la santé publique" textAlignment="CENTER" textFill="#f0e7e7">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="aa" layoutX="10.0" layoutY="52.0" prefHeight="395.0" prefWidth="788.0" style="-fx-background-color: #9C2B27;">
+         <children>
+            <ComboBox fx:id="combo" layoutX="14.0" layoutY="13.0" onAction="#Select" prefHeight="33.0" prefWidth="150.0" promptText="Gouvernorat" visibleRowCount="24" />
+            <Label fx:id="lb" alignment="CENTER" layoutX="279.0" layoutY="7.0" prefHeight="45.0" prefWidth="377.0" text="Choisir gouvernorat" textFill="#3e0707">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="table" layoutX="171.0" layoutY="56.0" prefHeight="282.0" prefWidth="607.0">
+              <columns>
+                <TableColumn fx:id="col_nomLabo" prefWidth="90.66665649414062" text="Nom_Labo" />
+                <TableColumn fx:id="colPrenom" prefWidth="66.66668701171875" text="Prenom" />
+                  <TableColumn fx:id="colNom" prefWidth="76.66665649414062" text="Nom" />
+                  <TableColumn fx:id="colCin" prefWidth="74.0" text="Cin" />
+                  <TableColumn fx:id="colResultat" minWidth="0.0" prefWidth="90.6666259765625" text="Resultat" />
+                  <TableColumn fx:id="colDate" minWidth="0.0" prefWidth="81.3333740234375" text="Date" />
+                  <TableColumn fx:id="colGouv" prefWidth="128.0" text="Gouvernorat" />
+              </columns>
+            </TableView>
+            <Button fx:id="btretour" layoutX="726.0" mnemonicParsing="false" onAction="#retour" prefHeight="33.0" prefWidth="47.0" style="-fx-background-color: #9C2B27;">
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/flech.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btPositif" layoutX="288.0" layoutY="349.0" mnemonicParsing="false" onAction="#Positif" prefHeight="25.0" prefWidth="144.0" text="Positif" />
+            <Button fx:id="btNegatif" layoutX="468.0" layoutY="349.0" mnemonicParsing="false" onAction="#Negatif" prefHeight="25.0" prefWidth="144.0" text="Negatif" />
+            <Button fx:id="btnStat" layoutX="630.0" layoutY="349.0" mnemonicParsing="false" onAction="#Stat" prefHeight="25.0" prefWidth="144.0" text="Statistique" />
+            <ImageView fx:id="map" fitHeight="318.0" fitWidth="144.0" layoutX="13.0" layoutY="60.0" opacity="0.93" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/map.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

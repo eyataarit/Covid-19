@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="360.0" prefWidth="674.0" style="-fx-background-color: #2D120F;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Labo_LoginController">
+   <children>
+      <AnchorPane fx:id="Anch" layoutX="14.0" layoutY="28.0" prefHeight="304.0" prefWidth="239.0" style="-fx-background-color: #9C2B27;">
+         <children>
+            <Label fx:id="lblCnxLabo" alignment="CENTER" layoutX="39.0" layoutY="34.0" prefHeight="28.0" prefWidth="155.0" text="Se connecter" textFill="#fceded">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idLabo" layoutX="25.0" layoutY="108.0" prefHeight="37.0" prefWidth="189.0" promptText="Identifiant" style="-fx-background-color: #9C2B27;" />
+            <PasswordField fx:id="mdpLabo" layoutX="25.0" layoutY="166.0" prefHeight="37.0" prefWidth="169.0" promptText="Password" style="-fx-background-color: #9C2B27;" />
+            <Button fx:id="btLabo" layoutX="30.0" layoutY="234.0" mnemonicParsing="false" onAction="#LoginOnAction" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: #E45652;" text="Se connecter">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="img" fitHeight="268.0" fitWidth="401.0" layoutX="261.0" layoutY="74.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/test-pcr.jpeg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnhompg" layoutX="564.0" layoutY="4.0" mnemonicParsing="false" onAction="#hompg" prefHeight="54.0" prefWidth="95.0" style="-fx-background-color: #2D120F;" text="home">
+         <graphic>
+            <ImageView fx:id="imghom" fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/homee.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
